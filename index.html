@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CG FASHION-HUB | Clothes & Shoes - RNG Plaza Nairobi</title>
+<meta name="description" content="CG FASHION-HUB - Legit Clothes & Shoes in Nairobi. We Deliver Countrywide. Payment After Delivery.">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',Arial,sans-serif}
+body{background:#fff;color:#111;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+
+/* TOP BAR */
+.topbar{background:#000;color:#fff;padding:8px 15px;text-align:center;font-size:13px;font-weight:600;letter-spacing:.5px}
+.topbar span{color:#ffcc00}
+.topbar b{color:#ff6a00}
+
+/* HEADER */
+header{background:#fff;position:sticky;top:0;z-index:100;box-shadow:0 2px 15px rgba(0,0,0,.1);padding:12px 5%;display:flex;justify-content:space-between;align-items:center}
+.logo{font-size:26px;font-weight:900;letter-spacing:1px}
+.logo i{color:#ff6a00;font-style:normal}
+.logo em{color:#111;font-style:normal}
+.logo small{display:block;font-size:10px;letter-spacing:4px;color:#888;font-weight:700}
+nav{display:flex;gap:18px;font-weight:700;font-size:14px}
+nav a{padding:8px 12px;border-radius:20px}
+nav a:hover{background:#000;color:#fff}
+.order-btn{background:#ff6a00;color:#fff!important;padding:10px 18px!important;border-radius:25px!important}
+.cart-badge{background:#e60000;color:#fff;padding:2px 7px;border-radius:50%;font-size:11px}
+
+/* HERO */
+.hero{background:linear-gradient(135deg,#000 0%,#1a1a1a 40%,#ff6a00 100%);color:#fff;padding:50px 5%;display:flex;gap:30px;align-items:center;flex-wrap:wrap}
+.hero-text{flex:1;min-width:280px}
+.hero-text h1{font-size:42px;line-height:1.1}
+.hero-text h1 span{color:#ffcc00}
+.hero-text h1 b{color:#ff6a00}
+.hero-text p{margin:15px 0;color:#ddd;font-size:16px}
+.badges{display:flex;flex-wrap:wrap;gap:10px;margin:15px 0}
+.badge{padding:8px 14px;border-radius:20px;font-size:12px;font-weight:800;color:#fff}
+.b1{background:#ff6a00}.b2{background:#00a651}.b3{background:#0066ff}.b4{background:#7b00ff}.b5{background:#e60000}
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{padding:13px 22px;border-radius:30px;font-weight:800;border:none;cursor:pointer;font-size:15px}
+.btn-orange{background:#ff6a00;color:#fff}
+.btn-white{background:#fff;color:#000}
+.btn-green{background:#25D366;color:#fff}
+.hero-img{flex:1;min-width:280px;text-align:center}
+.hero-img img{width:100%;max-width:420px;border-radius:20px;border:5px solid #fff;box-shadow:0 10px 30px rgba(0,0,0,.4);animation:float 3s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+
+/* TRUST STRIP */
+.trust{display:flex;justify-content:space-around;flex-wrap:wrap;background:#fff3e0;padding:18px 5%;text-align:center;gap:15px}
+.trust div{flex:1;min-width:140px}
+.trust b{font-size:18px;display:block}
+.trust small{color:#666}
+
+/* SECTION TITLE */
+.section{padding:35px 5%}
+.section h2{text-align:center;font-size:30px;margin-bottom:5px}
+.section h2 span{color:#ff6a00}
+.section p.sub{text-align:center;color:#666;margin-bottom:25px}
+
+/* FILTER */
+.filter{text-align:center;margin-bottom:25px}
+.filter button{padding:10px 18px;margin:5px;border:2px solid #000;border-radius:20px;background:#fff;font-weight:700;cursor:pointer}
+.filter button.active,.filter button:hover{background:#000;color:#fff}
+.filter button:nth-child(2).active{background:#ff6a00;border-color:#ff6a00}
+
+/* PRODUCTS GRID */
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.card{background:#fff;border-radius:18px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.1);transition:.3s;animation:fadeUp .6s ease both;border:1px solid #eee;position:relative}
+.card:hover{transform:translateY(-8px);box-shadow:0 15px 35px rgba(0,0,0,.18)}
+.card img{width:100%;height:260px;object-fit:cover;display:block;background:#f5f5f5}
+.card-body{padding:15px}
+.card-body h3{font-size:16px;margin-bottom:5px}
+.card-body .price{font-size:18px;font-weight:900;color:#e60000}
+.card-body .old{color:#999;text-decoration:line-through;font-size:13px;margin-left:5px}
+.tag{position:absolute;top:10px;left:10px;padding:5px 10px;border-radius:15px;color:#fff;font-size:11px;font-weight:800;z-index:2}
+.tag-new{background:#00a651}.tag-hot{background:#e60000}.tag-sale{background:#ff6a00}.tag-trend{background:#7b00ff}
+.stars{color:#ffcc00;font-size:14px;margin:5px 0}
+.legit{font-size:12px;color:#00a651;font-weight:700;background:#e6ffe9;padding:5px 8px;border-radius:8px;display:inline-block;margin:5px 0}
+.order-mini{width:100%;padding:11px;background:#000;color:#fff;border:none;border-radius:10px;font-weight:800;cursor:pointer;margin-top:8px}
+.order-mini:hover{background:#ff6a00}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+
+/* DELIVERY BANNER */
+.delivery{background:linear-gradient(90deg,#00a651,#0066ff,#7b00ff,#e60000,#ff6a00);color:#fff;padding:25px 5%;text-align:center;border-radius:0}
+.delivery h3{font-size:26px;letter-spacing:1px}
+.delivery p{margin-top:5px;font-weight:600}
+
+/* WHY US */
+.why{display:grid;grid-template-columns:repeat(4,1fr);gap:15px;margin-top:20px}
+.why div{background:#f9f9f9;padding:20px;border-radius:15px;text-align:center;border-top:4px solid #ff6a00}
+.why div:nth-child(2){border-color:#00a651}.why div:nth-child(3){border-color:#0066ff}.why div:nth-child(4){border-color:#7b00ff}
+.why span{font-size:30px}
+.why b{display:block;margin:8px 0 5px}
+
+/* MAP + ORDER */
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:25px;padding:20px 5% 40px}
+.box{background:#fff;border-radius:18px;box-shadow:0 4px 20px rgba(0,0,0,.1);padding:22px}
+.box h3{font-size:22px;margin-bottom:12px}
+.box h3 span{color:#ff6a00}
+iframe{width:100%;height:280px;border:0;border-radius:12px}
+input,select,textarea{width:100%;padding:13px;margin:8px 0;border:2px solid #eee;border-radius:10px;font-size:15px}
+input:focus,select:focus,textarea:focus{border-color:#ff6a00;outline:none}
+.submit-btn{width:100%;padding:14px;background:#00a651;color:#fff;border:none;border-radius:12px;font-size:17px;font-weight:900;cursor:pointer}
+.submit-btn:hover{background:#008a36}
+.note{font-size:13px;color:#666;text-align:center;margin-top:10px;background:#fff8e1;padding:10px;border-radius:8px}
+
+/* FOOTER */
+footer{background:#000;color:#fff;padding:40px 5% 20px}
+.foot-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:25px}
+.foot-grid h4{color:#ffcc00;margin-bottom:12px}
+.foot-grid p,.foot-grid a{display:block;color:#ccc;margin:6px 0;font-size:14px}
+.socials{display:flex;gap:10px;margin-top:12px;flex-wrap:wrap}
+.soc{width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:18px;color:#fff}
+.s-x{background:#000;border:1px solid #fff}.s-fb{background:#1877F2}.s-ig{background:linear-gradient(45deg,#feda75,#fa7e1e,#d62976,#962fbf,#4f5bd5)}.s-tt{background:#111;border:1px solid #fff}.s-wa{background:#25D366}.s-gm{background:#e60000}
+.copy{text-align:center;border-top:1px solid #333;padding-top:15px;margin-top:25px;color:#888;font-size:13px}
+
+/* CHAT BOT */
+#chatBtn{position:fixed;bottom:20px;right:20px;background:#ff6a00;color:#fff;border:none;width:60px;height:60px;border-radius:50%;font-size:28px;cursor:pointer;z-index:999;box-shadow:0 5px 20px rgba(0,0,0,.3);animation:pulse 2s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(255,106,0,.5)}70%{box-shadow:0 0 0 15px rgba(255,106,0,0)}100%{box-shadow:0 0 0 0 rgba(255,106,0,0)}}
+#chatBox{position:fixed;bottom:90px;right:20px;width:340px;max-width:92vw;background:#fff;border-radius:18px;box-shadow:0 10px 40px rgba(0,0,0,.3);display:none;z-index:999;overflow:hidden}
+.chat-head{background:#000;color:#fff;padding:14px;display:flex;justify-content:space-between;align-items:center}
+.chat-head b{color:#ffcc00}
+.chat-head span{color:#00ff88;font-size:12px}
+#chatMsgs{height:280px;overflow-y:auto;padding:12px;background:#f9f9f9}
+.msg{padding:9px 12px;border-radius:12px;margin:6px 0;max-width:85%;font-size:14px;line-height:1.4}
+.msg.bot{background:#fff;border:1px solid #eee}
+.msg.user{background:#000;color:#fff;margin-left:auto}
+.chat-input{display:flex;padding:10px;gap:8px}
+.chat-input input{flex:1;margin:0}
+.chat-input button{background:#ff6a00;color:#fff;border:none;padding:10px 16px;border-radius:10px;font-weight:800;cursor:pointer}
+.quick{display:flex;gap:6px;flex-wrap:wrap;padding:0 10px 10px}
+.quick button{background:#eee;border:none;padding:6px 10px;border-radius:15px;font-size:12px;cursor:pointer;font-weight:600}
+
+/* MOBILE */
+@media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}.why{grid-template-columns:repeat(2,1fr)}.two-col{grid-template-columns:1fr}.foot-grid{grid-template-columns:repeat(2,1fr)}header{flex-wrap:wrap}nav{width:100%;justify-content:center;margin-top:10px;flex-wrap:wrap}.hero-text h1{font-size:32px}}
+@media(max-width:480px){.grid{grid-template-columns:1fr}.card img{height:300px}.foot-grid{grid-template-columns:1fr}.hero{padding:30px 5%}}
+</style>
+</head>
+<body>
+
+<div class="topbar">🔥 FREE DELIVERY WITHIN NAIROBI CBD <span>|</span> <b>PAYMENT AFTER DELIVERY</b> <span>|</span> WE DELIVER COUNTRYWIDE 🚚</div>
+
+<header>
+  <div class="logo">CG <i>FASHION</i>-HUB<em></em><small>NAIROBI • KENYA</small></div>
+  <nav>
+    <a href="#shop">Shop</a>
+    <a href="#why">Why Us</a>
+    <a href="#location">Location</a>
+    <a href="#order" class="order-btn">🛒 ORDER NOW</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-text">
+    <h1>Look Rich.<br><span>Spend Less.</span><br><b>100% Legit.</b></h1>
+    <p>Latest Clothes & Shoes at CG FASHION-HUB, RNG Plaza, Nairobi. Trusted by 1000+ customers. Payment is AFTER delivery — you only pay when you see your goods.</p>
+    <div class="badges">
+      <span class="badge b1">✅ 100% LEGIT</span>
+      <span class="badge b2">🚚 COUNTRYWIDE</span>
+      <span class="badge b3">💰 PAY AFTER DELIVERY</span>
+      <span class="badge b4">⭐ 4.9 RATED</span>
+      <span class="badge b5">🔥 NEW STOCK</span>
+    </div>
+    <div class="hero-btns">
+      <button class="btn btn-orange" onclick="document.getElementById('shop').scrollIntoView({behavior:'smooth'})">🛍️ SHOP NOW</button>
+      <a href="https://wa.me/254181895975?text=Hi%20CG%20FASHION-HUB!%20I%20want%20to%20order" target="_blank"><button class="btn btn-green">💬 WhatsApp Us</button></a>
+      <button class="btn btn-white" onclick="document.getElementById('order').scrollIntoView({behavior:'smooth'})">📦 ORDER FORM</button>
+    </div>
+  </div>
+  <div class="hero-img"><img src="photo1.jpg" alt="CG FASHION-HUB Latest Collection"></div>
+</section>
+
+<div class="trust">
+  <div><b>1,200+</b><small>Happy Customers</small></div>
+  <div><b>47 Counties</b><small>We Deliver Everywhere</small></div>
+  <div><b>0 Scam</b><small>Pay After You Receive</small></div>
+  <div><b>Same Day</b><small>Delivery in Nairobi</small></div>
+</div>
+
+<!-- SHOP -->
+<section class="section" id="shop">
+  <h2>OUR <span>LATEST COLLECTION</span> 👗👟</h2>
+  <p class="sub">All photos are real stock at our shop. What you see is what you get. Click ORDER to buy.</p>
+  <div class="filter">
+    <button class="active" onclick="filterItems('all',this)">All Items</button>
+    <button onclick="filterItems('clothes',this)">👕 Clothes</button>
+    <button onclick="filterItems('shoes',this)">👟 Shoes</button>
+    <button onclick="filterItems('hot',this)">🔥 Hot Deals</button>
+  </div>
+  <div class="grid" id="productGrid"></div>
+</section>
+
+<div class="delivery">
+  <h3>🚚 WE DELIVER COUNTRYWIDE 🇰🇪</h3>
+  <p>Nairobi • Mombasa • Kisumu • Nakuru • Eldoret • Thika • Machakos • All 47 Counties — Payment After Delivery!</p>
+</div>
+
+<!-- WHY -->
+<section class="section" id="why">
+  <h2>WHY <span>CG FASHION-HUB?</span></h2>
+  <div class="why">
+    <div><span>✅</span><b>100% Legit</b><p>Real photos, real shop at RNG Plaza. Visit us anytime.</p></div>
+    <div><span>💰</span><b>Pay After Delivery</b><p>You check your item first, then you pay. No risk.</p></div>
+    <div><span>🚚</span><b>Fast Delivery</b><p>Nairobi same day. Upcountry 1-2 days via Wells Fargo / G4S.</p></div>
+    <div><span>⭐</span><b>Best Prices</b><p>Wholesale & Retail. Best quality for the lowest price in town.</p></div>
+  </div>
+</section>
+
+<!-- MAP + ORDER -->
+<div class="two-col">
+  <div class="box" id="location">
+    <h3>📍 OUR <span>LOCATION</span></h3>
+    <p><b>CG FASHION-HUB</b><br>RNG Plaza, Ronald Ngala Street, Nairobi CBD<br>Opposite OTC / Near Koja Stage<br><br>📞 <b>0181895975</b><br>💬 WhatsApp: <b>+254 181895975</b><br>📧 cgtobby53@gmail.com</p>
+    <br>
+    <iframe src="https://www.google.com/maps?q=RNG%20Plaza%2C%20Ronald%20Ngala%20Street%2C%20Nairobi&output=embed" loading="lazy"></iframe>
+    <br><br>
+    <a href="https://www.google.com/maps/search/?api=1&query=RNG+Plaza+Ronald+Ngala+Street+Nairobi" target="_blank"><button class="btn btn-orange" style="width:100%">🧭 GET DIRECTIONS ON MAP</button></a>
+  </div>
+
+  <div class="box" id="order">
+    <h3>🛒 ORDER <span>NOW</span></h3>
+    <p style="color:#666;font-size:14px">Fill this form. We will call / WhatsApp you to confirm. <b>Payment is AFTER Delivery.</b></p>
+    <form onsubmit="placeOrder(event)">
+      <input type="tel" id="phone" placeholder="📱 Your Phone Number e.g. 0712345678" required>
+      <input type="text" id="item" placeholder="👕 Type of Item / Product e.g. Nike Air Force, Hoodie Size M" required>
+      <textarea id="address" rows="2" placeholder="📍 Location Address e.g. Roysambu, TRM, House No..." required></textarea>
+      <select id="payment" required>
+        <option value="">💳 Select Mode of Payment (Pay After Delivery)</option>
+        <option>M-Pesa (After Delivery)</option>
+        <option>Cash on Delivery</option>
+        <option>Bank Transfer (After Delivery)</option>
+      </select>
+      <select id="delivery">
+        <option>🚚 Delivery - Nairobi Same Day</option>
+        <option>🚚 Delivery - Upcountry 1-2 Days</option>
+        <option>🏃 I Will Pick Up at RNG Plaza</option>
+      </select>
+      <button type="submit" class="submit-btn">✅ PLACE MY ORDER - PAY AFTER DELIVERY</button>
+      <div class="note">🔒 Secure & Smart: Your details go directly to CG FASHION-HUB via WhatsApp. We never share your number.</div>
+    </form>
+  </div>
+</div>
+
+<!-- FOOTER / CONTACT -->
+<footer>
+  <div class="foot-grid">
+    <div>
+      <h4>CG FASHION-HUB</h4>
+      <p>Your No.1 Trusted Fashion Shop in Nairobi. Clothes & Shoes. Legit. Affordable. Fast Delivery Countrywide.</p>
+      <div class="socials">
+        <a class="soc s-x" href="#" title="X">𝕏</a>
+        <a class="soc s-fb" href="#" title="Facebook">f</a>
+        <a class="soc s-ig" href="#" title="Instagram">◎</a>
+        <a class="soc s-tt" href="#" title="TikTok">♪</a>
+        <a class="soc s-wa" href="https://wa.me/254181895975" title="WhatsApp">✆</a>
+        <a class="soc s-gm" href="mailto:cgtobby53@gmail.com" title="Gmail">@</a>
+      </div>
+      <p style="margin-top:10px">@CG FASHION-HUB on all platforms</p>
+    </div>
+    <div>
+      <h4>QUICK LINKS</h4>
+      <a href="#shop">🛍️ Shop All Items</a>
+      <a href="#order">🛒 Order Now</a>
+      <a href="#location">📍 Find Our Shop</a>
+      <a href="https://wa.me/254181895975">💬 Chat on WhatsApp</a>
+    </div>
+    <div>
+      <h4>CONTACT US</h4>
+      <p>📞 Phone: 0181895975</p>
+      <p>💬 WhatsApp: +254 181895975</p>
+      <p>📧 Gmail: cgtobby53@gmail.com</p>
+      <p>📍 RNG Plaza, Nairobi CBD</p>
+    </div>
+    <div>
+      <h4>FOLLOW US</h4>
+      <p>𝕏 X / Twitter: @CG FASHION-HUB</p>
+      <p>📘 Facebook: @CG FASHION-HUB</p>
+      <p>📸 Instagram: @CG FASHION-HUB</p>
+      <p>🎵 TikTok: @CG FASHION-HUB</p>
+      <p style="color:#ffcc00;font-weight:800">WE DELIVER COUNTRYWIDE 🚚🇰🇪</p>
+    </div>
+  </div>
+  <div class="copy">© 2026 CG FASHION-HUB • RNG Plaza, Nairobi • All Rights Reserved • Pay After Delivery • Made with ❤️ in Kenya</div>
+</footer>
+
+<!-- MINIBOT -->
+<button id="chatBtn" onclick="toggleChat()">💬</button>
+<div id="chatBox">
+  <div class="chat-head"><div><b>CG Assistant 🤖</b><br><span>● Online - Replies Instantly</span></div><span style="cursor:pointer;font-size:20px" onclick="toggleChat()">✕</span></div>
+  <div id="chatMsgs"><div class="msg bot">Hi! 👋 Welcome to <b>CG FASHION-HUB</b>! I'm your assistant. Ask me anything — Price? Delivery? Location? Payment? I answer instantly!</div></div>
+  <div class="quick">
+    <button onclick="quickQ('What is the price?')">💰 Price?</button>
+    <button onclick="quickQ('Do you deliver?')">🚚 Delivery?</button>
+    <button onclick="quickQ('Where is your shop?')">📍 Location?</button>
+    <button onclick="quickQ('How do I order?')">🛒 How to Order?</button>
+  </div>
+  <div class="chat-input"><input id="chatInput" placeholder="Ask anything..." onkeypress="if(event.key==='Enter')sendMsg()"><button onclick="sendMsg()">Send</button></div>
+</div>
+
+<script>
+const products=[
+{id:1,name:"Premium Hoodie - Black / Orange",price:1500,old:2200,cat:"clothes",tag:"HOT",tagClass:"tag-hot",img:"photo1.jpg",stars:"★★★★★"},
+{id:2,name:"Classic Cargo Pants",price:1800,old:2500,cat:"clothes",tag:"NEW",tagClass:"tag-new",img:"photo2.jpg",stars:"★★★★★"},
+{id:3,name:"Nike Air Force Style Sneakers",price:2800,old:3800,cat:"shoes",tag:"SALE",tagClass:"tag-sale",img:"photo3.jpg",stars:"★★★★★"},
+{id:4,name:"Trendy Denim Jacket",price:2000,old:2800,cat:"clothes",tag:"TREND",tagClass:"tag-trend",img:"photo4.jpg",stars:"★★★★☆"},
+{id:5,name:"Jordan Style High Tops",price:3200,old:4200,cat:"shoes",tag:"HOT",tagClass:"tag-hot",img:"photo5.jpg",stars:"★★★★★"},
+{id:6,name:"Official T-Shirt - White",price:800,old:1200,cat:"clothes",tag:"NEW",tagClass:"tag-new",img:"photo6.jpg",stars:"★★★★★"},
+{id:7,name:"Running Shoes - Sport",price:2500,old:3200,cat:"shoes",tag:"SALE",tagClass:"tag-sale",img:"photo7.jpg",stars:"★★★★☆"},
+{id:8,name:"Sweatpants - Unisex",price:1300,old:1800,cat:"clothes",tag:"TREND",tagClass:"tag-trend",img:"photo8.jpg",stars:"★★★★★"},
+{id:9,name:"Leather Loafers - Premium",price:3500,old:4500,cat:"shoes",tag:"HOT",tagClass:"tag-hot",img:"photo9.jpg",stars:"★★★★★"},
+{id:10,name:"Two-Piece Tracksuit",price:2800,old:3600,cat:"clothes",tag:"NEW",tagClass:"tag-new",img:"photo10.jpg",stars:"★★★★★"},
+{id:11,name:"White Sneakers - Clean",price:2200,old:2900,cat:"shoes",tag:"SALE",tagClass:"tag-sale",img:"photo11.jpg",stars:"★★★★★"},
+{id:12,name:"Full Fashion Combo - Top + Shoe",price:4500,old:6000,cat:"hot",tag:"BEST DEAL",tagClass:"tag-hot",img:"photo12.jpg",stars:"★★★★★"},
+];
+function render(filter='all'){
+  const grid=document.getElementById('productGrid');
+  grid.innerHTML='';
+  products.filter(p=>filter==='all'||p.cat===filter||(filter==='hot'&&p.tag==='HOT')).forEach((p,i)=>{
+    grid.innerHTML+=`<div class="card" style="animation-delay:${i*0.08}s">
+      <span class="tag ${p.tagClass}">${p.tag}</span>
+      <img src="${p.img}" alt="${p.name}" onerror="this.src='https://via.placeholder.com/400x400?text=CG+FASHION-HUB'">
+      <div class="card-body"><h3>${p.name}</h3><div class="stars">${p.stars} (120+ reviews)</div><span class="legit">✅ Verified Legit • In Stock</span><br><span class="price">KSh ${p.price.toLocaleString()}</span><span class="old">KSh ${p.old.toLocaleString()}</span><br><small style="color:#666">Sizes Available • Pay After Delivery</small><button class="order-mini" onclick="orderItem('${p.name}')">🛒 ORDER THIS ITEM</button></div></div>`;
+  });
+}
+function filterItems(cat,btn){document.querySelectorAll('.filter button').forEach(b=>b.classList.remove('active'));btn.classList.add('active');render(cat);}
+function orderItem(name){document.getElementById('item').value=name;document.getElementById('order').scrollIntoView({behavior:'smooth'});alert('You selected: '+name+' — Fill your phone & location below to order!');}
+function placeOrder(e){e.preventDefault();const phone=document.getElementById('phone').value;const item=document.getElementById('item').value;const addr=document.getElementById('address').value;const pay=document.getElementById('payment').value;const msg=`Hi CG FASHION-HUB! I want to order:%0A📱 Phone: ${phone}%0A👕 Item: ${item}%0A📍 Address: ${addr}%0A💳 Payment: ${pay} (Pay After Delivery)`;window.open(`https://wa.me/254181895975?text=${msg}`,'_blank');alert('✅ Order Received! We will WhatsApp you now to confirm. Thank you for choosing CG FASHION-HUB!');}
+render();
+
+// MINIBOT - Answers ALL Questions
+function toggleChat(){const b=document.getElementById('chatBox');b.style.display=b.style.display==='block'?'none':'block';}
+function quickQ(q){document.getElementById('chatInput').value=q;sendMsg();}
+function sendMsg(){
+  const inp=document.getElementById('chatInput');const q=inp.value.trim();if(!q)return;
+  const box=document.getElementById('chatMsgs');
+  box.innerHTML+=`<div class="msg user">${q}</div>`;
+  inp.value='';
+  setTimeout(()=>{box.innerHTML+=`<div class="msg bot">${botAnswer(q)}</div>`;box.scrollTop=box.scrollHeight;},400);
+  box.scrollTop=box.scrollHeight;
+}
+function botAnswer(q){
+  q=q.toLowerCase();
+  if(q.includes('price')||q.includes('cost')||q.includes('how much')||q.includes('bei')) return "💰 Our prices: T-Shirts from KSh 800, Hoodies KSh 1,500, Shoes from KSh 2,200, Combos KSh 4,500. All prices are on each item! Which item do you want?";
+  if(q.includes('deliver')||q.includes('delivery')||q.includes('county')||q.includes('mombasa')||q.includes('kisumu')) return "🚚 YES! WE DELIVER COUNTRYWIDE! Nairobi = Same Day. Upcountry = 1-2 Days. Delivery fee depends on location. Payment is AFTER delivery!";
+  if(q.includes('location')||q.includes('shop')||q.includes('where')||q.includes('rng')||q.includes('find')) return "📍 We are at RNG Plaza, Ronald Ngala Street, Nairobi CBD. Opposite OTC, near Koja Stage. Come visit us! Or use the map on our website.";
+  if(q.includes('order')||q.includes('buy')||q.includes('how to')) return "🛒 To order: 1) Fill the ORDER FORM at bottom with phone + item + address, 2) We WhatsApp you to confirm, 3) We deliver, 4) You pay AFTER you receive. Easy!";
+  if(q.includes('pay')||q.includes('payment')||q.includes('mpesa')||q.includes('cash')) return "💳 Payment is AFTER Delivery! You can pay with M-Pesa, Cash on Delivery, or Bank Transfer AFTER you check your item. No risk, 100% safe!";
+  if(q.includes('legit')||q.includes('real')||q.includes('scam')||q.includes('trust')||q.includes('fake')) return "✅ 100% LEGIT Boss! Real shop at RNG Plaza, real photos, 1,200+ happy customers, and you pay AFTER delivery. You can even visit our shop to confirm!";
+  if(q.includes('size')||q.includes('sizes')) return "📏 We have all sizes: S, M, L, XL, XXL for clothes. Shoes 39-45. Tell us your size when ordering and we will confirm availability!";
+  if(q.includes('whatsapp')||q.includes('phone')||q.includes('contact')||q.includes('call')) return "📞 Call: 0181895975 | WhatsApp: +254 181895975 | Gmail: cgtobby53@gmail.com | We reply fast!";
+  if(q.includes('open')||q.includes('close')||q.includes('time')||q.includes('hours')) return "🕒 We are open Mon - Sat: 8am - 8pm, Sunday: 10am - 6pm. WhatsApp works 24/7!";
+  if(q.includes('hi')||q.includes('hello')||q.includes('hey')||q.includes('sasa')||q.includes('niaje')) return "Hi! 👋 Karibu to CG FASHION-HUB! How can I help you today? Ask me about price, delivery, location, or how to order!";
+  if(q.includes('discount')||q.includes('offer')) return "🔥 YES! We have discounts! If you buy 2+ items, we give you a discount + free delivery within CBD. Tell us what you want!";
+  if(q.includes('return')||q.includes('exchange')) return "🔄 Yes, if size is wrong or item has issue, we exchange within 2 days. Just WhatsApp us on +254 181895975.";
+  if(q.includes('thank')) return "You're welcome! ❤️ Thank you for choosing CG FASHION-HUB. Karibu sana!";
+  return "Great question! 🤖 At CG FASHION-HUB we sell legit clothes & shoes, we deliver countrywide, and payment is AFTER delivery. Our shop is RNG Plaza, Nairobi. WhatsApp us on +254 181895975 for instant help, or ask me about Price, Delivery, Location, or How to Order!";
+}
+</script>
+</body>
+</html>
